@@ -1,0 +1,21 @@
+header {
+    background: $black;
+    padding: 80px 0;
+}
+
+ul.about-gabe {
+    margin-bottom: 25px;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 40px;
+        li {
+            display: inline-block;
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+.mission {
+    max-width: 65rem;
+}

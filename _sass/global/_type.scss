@@ -1,0 +1,30 @@
+$base-font-family: "adelle-sans",sans-serif;
+$display-family: "freight-neo-pro",sans-serif;
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $base-font-family;
+}
+
+p,
+.s-type{
+    font-size: 12px;
+    line-height: 16px;
+}
+
+h1,
+.l-type {
+    margin: 0;
+    letter-spacing: 0.2px;
+    font-weight: 400;
+    font-family: $display-family;
+    font-size: 20px;
+    line-height: 28px;
+    @media screen and (min-width: 768px) {
+        font-size: 24px;
+        line-height: 30px;
+    }
+}

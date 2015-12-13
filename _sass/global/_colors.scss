@@ -1,0 +1,14 @@
+$black: #323233;
+$white: #fff;
+$white-40: rgba($white,0.4);
+$white-20: rgba($white,0.2);
+
+.white {
+    color: $white;
+    &-20 {
+        color: $white-20;
+    }
+    &-40 {
+        color: $white-40;
+    }
+}
