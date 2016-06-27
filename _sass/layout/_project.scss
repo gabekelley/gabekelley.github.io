@@ -1,0 +1,40 @@
+.project {
+  padding: 64px 0 32px;
+
+  &__images {
+    margin: 32px 0;
+    @media screen and (min-width: 768px) {
+      margin: 64px 0;
+    }
+  }
+
+
+
+  .p-large.t-contain {
+    font-size: 18px;
+    line-height: 30px;
+    @media screen and (min-width: 768px) {
+      max-width: 625px;
+    }
+  }
+
+  &__image {
+    height: 500px;
+    img {
+      max-height: 100%;
+      width: auto;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    padding: 64px 0;
+  }
+
+  .flickity-page-dots {
+    bottom: -50px;
+  }
+
+  & + .project {
+    border-top: 1px solid rgba($black,0.3);
+  }
+
+}

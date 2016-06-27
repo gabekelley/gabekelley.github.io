@@ -1,21 +1,45 @@
-header {
+.index-head {
+    height: 100vh;
+    padding: 64px 0 32px;
     background: $black;
-    padding: 80px 0;
-}
+    color: $white;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
 
-ul.about-gabe {
-    margin-bottom: 25px;
-    @media screen and (min-width: 768px) {
-        margin-bottom: 40px;
-        li {
-            display: inline-block;
-            &:not(:last-child) {
-                margin-right: 20px;
-            }
+    .p-large {
+        width: 90%;
+        max-width: 720px;
+        margin: 0;
+    }
+
+    .about {
+        position: absolute;
+        bottom: 32px;
+
+        @media screen and (min-width: 768px) {
+            bottom: 64px;
         }
     }
-}
 
-.mission {
-    max-width: 65rem;
+    .nav-links {
+        margin-top: 48px;
+    }
+
+    a.nav-link {
+        font-family: $display-family;
+        font-size: 12px;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 1.4px;
+        font-weight: 500;
+        color: white;
+
+        & + a.nav-link {
+            margin-left: 24px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        padding: 128px 0 64px;
+    }
 }

@@ -1,5 +1,5 @@
-$base-font-family: "adelle-sans",sans-serif;
-$display-family: "freight-neo-pro",sans-serif;
+$base-font-family: "acumin-pro",sans-serif;
+$display-family: "acumin-pro-wide",sans-serif;
 
 html {
     font-size: 62.5%;
@@ -7,6 +7,7 @@ html {
 
 body {
     font-family: $base-font-family;
+    -webkit-font-smoothing: antialiased;
 }
 
 p,
@@ -15,16 +16,25 @@ p,
     line-height: 16px;
 }
 
+.t-display {
+  font-family: $display-family;
+}
+
+.t-bold {
+  font-weight: bold;
+}
+
 h1,
 .l-type {
     margin: 0;
-    letter-spacing: 0.2px;
-    font-weight: 400;
-    font-family: $display-family;
+    letter-spacing: 0.6px;
+    font-weight: 500;
     font-size: 20px;
     line-height: 28px;
-    @media screen and (min-width: 768px) {
-        font-size: 24px;
-        line-height: 30px;
-    }
+}
+
+.p-large {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 400;
 }

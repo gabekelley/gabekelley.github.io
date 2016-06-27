@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {{ content }}
+    <div id="work">
+    {% for post in site.posts  %}
+    <div class="project">
+      <div class="container">
+        <p class="l-type t-display">{{ post.title }}</p>
+        <p class="p-large t-contain">{{ post.content | remove: '<p>' | remove: '</p>' }}</p>
+      </div>
+      <div class="project__images">
+      {% for img in post.images %}
+        <div class="project__image">
+          <img src="http://localhost:4000/{{img}}" alt="">
+        </div>
+      {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+    </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js" charset="utf-8"></script>
+  <script src="https://npmcdn.com/flickity@1.2/dist/flickity.pkgd.min.js"></script>
+  <script>
+    $('.project__images').flickity({
+      contain: true,
+      freeScroll: true,
+      wrapAround: true,
+      prevNextButtons: false
+    });
+    $(function() {
+      $('a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 800);
+            return false;
+          }
+        }
+      });
+    });
+  </script>
+
+  </body>
+
+</html>
