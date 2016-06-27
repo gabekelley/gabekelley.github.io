@@ -1,0 +1,25 @@
+footer {
+  margin-top: 32px;
+  p {
+    font-size: 0;
+  }
+  a {
+    border-top: 1px solid $black;
+    padding: 16px 0;
+    color: $black;
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 33.33333%;
+    text-align: center;
+    text-decoration: none;
+    & + a {
+      border-left: 1px solid $black;
+    }
+    &:hover {
+      background: $black;
+      color: $white;
+      cursor: pointer;
+    }
+  }
+}
