@@ -3,8 +3,17 @@
 
   &__images {
     margin: 32px 0;
+    @media screen and (max-width: 768px) {
+      &:after {
+        content: '';
+      }
+    }
     @media screen and (min-width: 768px) {
       margin: 64px 0;
+      &:after {
+        content: 'flickity';
+        display: none;
+      }
     }
   }
 
@@ -19,10 +28,23 @@
   }
 
   &__image {
-    height: 500px;
+    width: 100vw;
+    height: auto;
+    text-align: center;
+    margin: 0 0 32px;
     img {
-      max-height: 100%;
-      width: auto;
+      width: 90%;
+      margin: 0 auto;
+    }
+    @media screen and (min-width: 768px) {
+      width: initial;
+      height: 500px;
+      margin: 0;
+      text-align: initial;
+      img {
+        max-height: 100%;
+        width: auto;
+      }
     }
   }
   @media screen and (min-width: 768px) {
