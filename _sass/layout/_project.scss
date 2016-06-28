@@ -17,6 +17,17 @@
     }
   }
 
+  a {
+    color: $black;
+    text-decoration: none;
+    border-bottom: 1px solid rgba($black,0.3);
+    padding-bottom: 2px;
+    transition: border-bottom-color 0.2s ease-in-out;
+    &:hover {
+      border-bottom-color: $black;
+    }
+  }
+
 
 
   .p-large.t-contain {

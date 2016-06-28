@@ -10,4 +10,4 @@ images:
   - images/bindery/5.jpg
   - images/bindery/6.png
 ---
-Design and development, both front and back-end, on a personal project that will help me track the books I am reading in a more comprehendable way than other services. Built using React/Redux and Phoenix on top of Elixir. Currently in development.
+Reading takes up most of my time, not that I'm complaining. I needed a better way to track my reading and be able to share it with others while also displaying many of the beautiful book covers there are in the world, something other services aren't focusing on. Coming soon the world wide web.

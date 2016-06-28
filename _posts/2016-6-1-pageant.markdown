@@ -10,4 +10,4 @@ images:
   - images/pageant/5.jpg
   - images/pageant/7.png
 ---
-Design and development, both front and back-end, on a personal project that will help me track the books I am reading in a more comprehendable way than other services. Built using React/Redux and Phoenix on top of Elixir. Currently in development.
+[Pageant](http://pageant.io){:target='_blank'} is a service that allows you to follow art exhibitions and it makes that sure you don't miss them. Spawned out of an intense case of F.O.M.O., Pageant was designed and built over a weekend in mid-2016.
