@@ -8,9 +8,8 @@ footer {
     padding: 16px 0;
     color: $black;
     font-size: 16px;
-    display: inline-block;
-    vertical-align: middle;
-    width: 33.33333%;
+    display: block;
+    width: 100%;
     text-align: center;
     text-decoration: none;
     & + a {
@@ -20,6 +19,11 @@ footer {
       background: $black;
       color: $white;
       cursor: pointer;
+    }
+    @media screen and (min-width: 768px) {
+      display: inline-block;
+      vertical-align: middle;
+      width: 25%;
     }
   }
 }
