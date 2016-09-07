@@ -7,33 +7,6 @@
 
     {{ content }}
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js" charset="utf-8"></script>
-  <script src="https://npmcdn.com/flickity@2.0.2/dist/flickity.pkgd.min.js"></script>
-  <script>
-    $('.project__images').flickity({
-      contain: true,
-      freeScroll: true,
-      wrapAround: true,
-      prevNextButtons: false,
-      watchCSS: true,
-      imagesLoaded: true,
-    });
-    $(function() {
-      $('a[href*="#"]:not([href="#"])').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html, body').animate({
-              scrollTop: target.offset().top
-            }, 800);
-            return false;
-          }
-        }
-      });
-    });
-  </script>
-
   </body>
 
 </html>
