@@ -6,26 +6,6 @@
   <body>
 
     {{ content }}
-    <div id="work">
-    {% for post in site.posts  %}
-    <div class="project">
-      <div class="container">
-        <p class="l-type t-display">{{ post.title }}</p>
-        <p class="p-large t-contain">{{ post.content | remove: '<p>' | remove: '</p>' }}</p>
-      </div>
-      <div class="project__images">
-      {% for img in post.images %}
-        {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
-        <div class="project__image">
-          <img src="http://gabekelley.github.io/{{img}}" {% if thecycle == 'odd' %}width="532"{% else %}width="244"{% endif %} alt="">
-        </div>
-      {% endfor %}
-      </div>
-    </div>
-    {% endfor %}
-    </div>
-
-    {% include footer.html %}
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js" charset="utf-8"></script>
   <script src="https://npmcdn.com/flickity@2.0.2/dist/flickity.pkgd.min.js"></script>
