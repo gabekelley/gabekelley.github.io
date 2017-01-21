@@ -1,6 +1,6 @@
 .index-head {
     height: 100vh;
-    padding: 64px 0 32px;
+    padding: 32px 0;
     background: $black;
     color: $white;
     position: relative;
@@ -10,12 +10,21 @@
         margin: 0;
     }
 
-    .about {
-        position: absolute;
-        bottom: 32px;
+    .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        @media screen and(min-width: 768px) {
+            flex-direction: row;
+        }
+    }
 
+    .about {
+        margin-bottom: 10px;
         @media screen and (min-width: 768px) {
-            bottom: 64px;
+            flex: 1;
+            text-align: right;
+            margin-bottom: 0;
         }
     }
 
@@ -38,6 +47,45 @@
     }
 
     @media screen and (min-width: 768px) {
-        padding: 128px 0 64px;
+        padding: 128px 0;
+    }
+}
+
+.bio {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $white;
+    height: 100%;
+
+    &__block {
+        border-top: 1px solid $white;
+        padding: 8px 0 12px;
+        width: 100%;
+
+        h2 {
+            margin: 0;
+            font-family: $display-family;
+            font-weight: 400;
+        }
+
+        &.one {
+            flex: 1;
+        }
+
+        &.two {
+            flex: 2;
+        }
+
+        &.four {
+            flex: 4;
+        }
+
+        &.eighteen {
+            flex: 18;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        flex: 2;
     }
 }
