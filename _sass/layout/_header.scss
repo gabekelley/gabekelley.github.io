@@ -12,17 +12,22 @@
 
     .container {
         height: 100%;
-        display: flex;
-        flex-direction: column-reverse;
+        @include vendor-prefix(display, flex);
+        @include vendor-prefix(flex-direction, column-reverse);
         @media screen and(min-width: 768px) {
-            flex-direction: row;
+            @include vendor-prefix(flex-direction, row);
         }
     }
 
     .about {
         margin-bottom: 10px;
+
+        p {
+            line-height: 10px;
+        }
+
         @media screen and (min-width: 768px) {
-            flex: 1;
+            @include vendor-prefix(flex, 1);
             text-align: right;
             margin-bottom: 0;
         }
@@ -52,8 +57,8 @@
 }
 
 .bio {
-    display: flex;
-    flex-direction: column;
+    @include vendor-prefix(display, flex);
+    @include vendor-prefix(flex-direction, column);
     border-bottom: 1px solid $white;
     height: 100%;
 
@@ -69,23 +74,23 @@
         }
 
         &.one {
-            flex: 1;
+            @include vendor-prefix(flex, 1);
         }
 
         &.two {
-            flex: 2;
+            @include vendor-prefix(flex, 2);
         }
 
         &.four {
-            flex: 4;
+            @include vendor-prefix(flex, 4);
         }
 
         &.eighteen {
-            flex: 18;
+            @include vendor-prefix(flex, 18);
         }
     }
 
     @media screen and (min-width: 768px) {
-        flex: 2;
+        @include vendor-prefix(flex, 2);
     }
 }
